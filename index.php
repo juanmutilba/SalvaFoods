@@ -12,7 +12,7 @@
     <link rel="icon" href="css/images/SALVA-12.png" type="image/png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <script src="js/java.js" type="text/javascript"></script>
@@ -133,17 +133,17 @@
             <div class="receta_foto">
                 <img src="./css/images/torta_mani.jpg" class="recetas_imagen" alt="flan">
                 <p> Torta de Maní </p>
-                <a href="" id="verReceta" class="verReceta"> ver receta </a>
+                <button class="btn-abrir-popup" > ver receta </button>
             </div>
             <div class="receta_foto" id="receta_foto2">
                 <img src="./css/images/galletitas.jpg" class="recetas_imagen" id="imagen_receta2" alt="flan">
                 <p> Galletitas </p>
-                <a href="" id="verReceta" class="verReceta"> ver receta </a>
+                <button class="btn-abrir-popup" > ver receta </button>
             </div>
             <div class="receta_foto">
                 <img src="./css/images/barritas.jpg" class="recetas_imagen3" alt="Barritas">
                 <p> Barritas </p>
-                <button id="btn-abrir-popup"> ver receta </button>
+                <button class="btn-abrir-popup" > ver receta </button>
             </div>
         </div>
 
@@ -163,10 +163,14 @@
     </div>
     <div class="overlay" id="overlay">
         <div class="popup" id="popup">
-            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-            <h3>Receta</h3>
-            <img src="./css/images/barritas.jpg" class="recetas_imagen_popup" alt="barritas">
+            <div>
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+            </div>
+            <div>
+                <h3>Receta</h3>
+            </div>
             <div class="ingredientes">
+                <img src="./css/images/torta_mani.jpg" class="recetas_imagen_popup" alt="barritas">
                 <ul>
                     <li>mani</li>
                     <li>crema</li>
@@ -174,6 +178,69 @@
                     <li>frutillas</li>
                     <li>coco</li>
                 </ul>
+            </div>
+            <div class="preparacion">
+                <ol>
+                    <li>poner ingredientes en un bowl</li>
+                    <li>mezclar</li>
+                    <li>calentar a baño maria</li>
+                    <li>hornear durante 45 minutos a fuego medio</li>
+                    <li>disfrutar una rica receta</li>
+                </ol>
+            </div>
+        </div>
+        <div class="popup" id="popup">
+            <div>
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+            </div>
+            <div>
+                <h3>Receta</h3>
+            </div>
+            <div class="ingredientes">
+                <img src="./css/images/galletitas.jpg" class="recetas_imagen_popup" alt="barritas">
+                <ul>
+                    <li>mani</li>
+                    <li>crema</li>
+                    <li>maicena</li>
+                    <li>frutillas</li>
+                    <li>coco</li>
+                </ul>
+            </div>
+            <div class="preparacion">
+                <ol>
+                    <li>poner ingredientes en un bowl</li>
+                    <li>mezclar</li>
+                    <li>calentar a baño maria</li>
+                    <li>hornear durante 45 minutos a fuego medio</li>
+                    <li>disfrutar una rica receta</li>
+                </ol>
+            </div>
+        </div>
+        <div class="popup" id="popup">
+            <div>
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+            </div>
+            <div>
+                <h3>Receta</h3>
+            </div>
+            <div class="ingredientes">
+                <img src="./css/images/barritas.jpg" class="recetas_imagen_popup" alt="barritas">
+                <ul>
+                    <li>mani</li>
+                    <li>crema</li>
+                    <li>manteca</li>
+                    <li>durazno</li>
+                    <li>coco</li>
+                </ul>
+            </div>
+            <div class="preparacion">
+                <ol>
+                    <li>poner ingredientes en un bowl</li>
+                    <li>mezclar</li>
+                    <li>calentar a baño maria</li>
+                    <li>hornear durante 45 minutos a fuego medio</li>
+                    <li>disfrutar una rica receta</li>
+                </ol>
             </div>
         </div>
     </div>

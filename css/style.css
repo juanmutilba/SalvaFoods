@@ -186,6 +186,7 @@ body {
     justify-content: space-around;
     background-color: rgb(248, 248, 248);
 }
+
 .recetaOculto {
     visibility: hidden;
 }
@@ -207,6 +208,21 @@ body {
     transition: 0.5s;
 }
 
+.btn-abrir-popup {
+    color: rgb(248, 248, 248);
+    background: none;
+    border: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-abrir-popup:hover {
+    color: rgb(124, 118, 118);
+    border: solid;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
 .overlay {
     background-color: rgba(0, 0, 0, 0.3);
     position: fixed;
@@ -218,13 +234,16 @@ body {
     align-items: center;
     justify-content: center;
     visibility: hidden;
+   
 }
 
-.overlay.active {
+.popup.active , .overlay.active {
     visibility: visible;
 }
 
 .popup {
+    display: flex;
+    flex-direction: column;
     background-color: #f8f8f8;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
     border-radius: 13px;
@@ -234,7 +253,8 @@ body {
     width: 600px;
     transition: .3s ease all;
     transform: scale(0.7);
-    opacity: 0;
+    opacity: 1;
+    visibility: hidden;
 }
 
 .popup .btn-cerrar-popup {
@@ -251,6 +271,7 @@ body {
 }
 
 .popup h3 {
+    width: 100%;
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 10px;
@@ -258,11 +279,34 @@ body {
 }
 
 .popup .ingredientes {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     font-size: 20px;
     font-weight: 300;
     margin-bottom: 10px;
     opacity: 0;
 }
+
+.popup .ingredientes>ul {
+    list-style-image: url("images/mano.svg"); 
+    padding: 0px;
+    margin-left: 15px;
+    
+}
+.popup .ingredientes>ul>li {
+    height: 30px;
+    font-weight: 400;
+    
+}
+.popup .preparacion>ol {
+     
+    padding: 0px;
+    margin-left: 15px;
+    
+}
+
+
 
 /* ANIMACIONES */
 

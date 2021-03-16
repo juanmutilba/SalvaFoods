@@ -50,32 +50,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 4000);
 
 
-    let verReceta = document.querySelector("#receta_foto2");
-    let recetaOculto = document.querySelector('#imagen_receta2');
 
-    verReceta.addEventListener("onMouseOver", mostrarReceta);
+    mostrarReceta();
+
     function mostrarReceta() {
-        recetaOculto.classList.add(recetaOculto);
+        let btnabrirpopup = document.querySelectorAll('.btn-abrir-popup');
+        for (let i = 0; i < btnabrirpopup.length; i++) {
+            btnabrirpopup[i].addEventListener('click', function (e) {
+                let overlay = document.querySelector('.overlay');
+                overlay.classList.add("active");
+                let popUp = document.querySelectorAll(".popup");
+                popUp[i].classList.add("active");
+                console.log(popUp[i]);
+
+                let cerrar = document.querySelectorAll(".btn-cerrar-popup");
+                for (let boton of cerrar) {
+                    boton.addEventListener("click", function () {
+                        popUp[i].classList.remove("active");
+                        overlay.classList.remove("active");
+                    })
+                }
+
+            });
+        }
     }
-    verReceta.addEventListener("onMouseOut", mostrarReceta);
-    function mostrarReceta() {
-        recetaOculto.classList.remove(recetaOculto);
-    }
 
 
-    let btnabrirpopup = document.getElementById('btn-abrir-popup'),
-        overlay = document.getElementById('overlay'),
-        popup = document.getElementById('popup'),
-        btncerrarpopup = document.getElementById('btn-cerrar-popup');
-
-        btnabrirpopup.addEventListener('click', function(){
-            overlay.classList.add("active");
-            popup.classList.add("active");
-        })
-        btncerrarpopup.addEventListener('click', function(){
-            overlay.classList.remove("active");
-            popup.classList.remove("active");
-        })
 
 
 })
