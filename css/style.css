@@ -9,32 +9,54 @@ body {
     text-align: justify;
 }
 
+/* HEADER */
+
 .conteiner_logo {
     padding: 1%;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.buscar {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    visibility: hidden;
+}
+
+.buscar input {
+    width: 70%;
 }
 
 .loop {
-    width: 19px;
+    width: 1em;
 }
 
 .logo_principal {
-    width: 60rem;
+    width: 60%;
 }
 
 .cuenta {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     width: 20%;
+    visibility: hidden;
 }
 
 .carrito {
     width: 3rem;
 }
 
+/* PRINCIPAL */
+
 .principal {
     display: flex;
     flex-direction: column;
 }
+
+/* CARROUSEL */
 
 .center_y {
     position: relative;
@@ -50,14 +72,15 @@ body {
 
 .fotos_carrusel {
     width: 100%;
-    height: 400px;
+    height: 200px;
+    display: flex;
     position: relative;
     margin: 0.5;
 }
 
 .item {
     width: 100%;
-    height: 320px;
+    height: 200px;
     position: absolute;
 }
 
@@ -110,6 +133,8 @@ body {
     animation-duration: .5s;
 }
 
+/* ENTREGAS */
+
 .entrega {
     display: flex;
     justify-content: center;
@@ -126,11 +151,15 @@ body {
 
 .entrega>div>img {
     position: absolute;
-    width: 50px;
+    width: 3%;
+}
+
+.entrega p {
+    font-size: 70%;
 }
 
 .envios_camion {
-    left: 8%;
+    left: 5%;
 }
 
 .envios_tarjeta {
@@ -138,8 +167,10 @@ body {
 }
 
 .envios_candado {
-    left: 66%;
+    left: 63%;
 }
+
+/* NOSOTROS */
 
 .nosotros {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -154,16 +185,15 @@ body {
 .nosotros>p {
     text-align: center;
     width: 70%;
-    font-size: 1.5rem;
+    font-size: 1.5em;
 }
 
-.titulo {
-    text-shadow: 1px 1px 5px rgba(128, 128, 128, 0.507);
-}
+/* RECETAS */
 
 .verde {
-    color: rgba(31, 121, 9, 0.897);
+    color: rgba(31, 121, 9, 0.945);
     letter-spacing: 0.1em;
+    text-align: center;
 }
 
 .recetas_titulo {
@@ -187,15 +217,13 @@ body {
     background-color: rgb(248, 248, 248);
 }
 
-.recetaOculto {
-    visibility: hidden;
-}
-
 .receta_foto {
     padding: 3%;
     display: flex;
     flex-direction: column;
+    width: 30%;
     background-color: rgb(248, 248, 248);
+    align-items: center;
 }
 
 .receta_foto:hover {
@@ -208,10 +236,37 @@ body {
     transition: 0.5s;
 }
 
+.recetaOculto {
+    visibility: hidden;
+}
+
+.recetas_foto>div>p {
+    text-align: center;
+}
+
+.receta_foto>img {
+    width: 100%;
+    height: 100px;
+}
+
+.recetas_imagen_popup {
+    width: 220px;
+    height: 220px;
+    opacity: 0;
+}
+
+.verReceta {
+    color: grey;
+    text-decoration: none;
+}
+
+/* POP UP */
+
 .btn-abrir-popup {
     color: rgb(248, 248, 248);
-    background: none;
-    border: 0;
+    background-color: rgb(0, 102, 219);
+    border-radius: 10%;
+    box-shadow: 1px 1px gray;
     width: 100%;
     text-align: center;
 }
@@ -234,10 +289,9 @@ body {
     align-items: center;
     justify-content: center;
     visibility: hidden;
-   
 }
 
-.popup.active , .overlay.active {
+.popup.active, .overlay.active {
     visibility: visible;
 }
 
@@ -289,24 +343,20 @@ body {
 }
 
 .popup .ingredientes>ul {
-    list-style-image: url("images/mano.svg"); 
+    list-style-image: url("images/mano.svg");
     padding: 0px;
     margin-left: 15px;
-    
 }
+
 .popup .ingredientes>ul>li {
     height: 30px;
     font-weight: 400;
-    
 }
+
 .popup .preparacion>ol {
-     
     padding: 0px;
     margin-left: 15px;
-    
 }
-
-
 
 /* ANIMACIONES */
 
@@ -358,26 +408,6 @@ body {
     }
 }
 
-.recetas_foto>div>p {
-    text-align: center;
-}
-
-.receta_foto>img {
-    width: 220px;
-    height: 220px;
-}
-
-.recetas_imagen_popup {
-    width: 220px;
-    height: 220px;
-    opacity: 0;
-}
-
-.verReceta {
-    color: grey;
-    text-decoration: none;
-}
-
 .contacto {
     position: relative;
     left: 30%;
@@ -416,22 +446,84 @@ body {
 
 footer, footer>div {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
 }
 
 .div_copyright {
     position: relative;
-    left: 37%;
+    text-align: center;
 }
 
 .div_redes {
+    display: none;
     position: relative;
     right: 2%;
 }
 
 .boton_redes {
     margin: 2px;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
+}
+
+@media only screen and (min-width: 600px) {
+    .fotos_carrusel {
+        height: 400px;
+    }
+    .item {
+        width: 100%;
+        height: 400px;
+        position: absolute;
+    }
+    .entrega>div>img {
+        position: absolute;
+        width: 20px;
+    }
+    .entrega p {
+        font-size: 90%;
+    }
+    .envios_camion {
+        left: 8%;
+    }
+    .envios_tarjeta {
+        left: 35%;
+    }
+    .envios_candado {
+        left: 66%;
+    }
+    .receta_foto img {
+        display: flex;
+    }
+    .btn-abrir-popup {
+        color: rgb(248, 248, 248);
+        background-color: none;
+        border-radius: none;
+        border: none;
+        background: none;
+        box-shadow: none;
+    }
+    .receta_foto>img {
+        width: 100%;
+        height: 220px;
+    }
+    footer, footer>div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .div_copyright {
+        position: relative;
+        text-align: center;
+    }
+    .div_redes {
+        display: flex;
+        position: relative;
+        right: 2%;
+    }
+    .boton_redes {
+        margin: 2px;
+        width: 30px;
+        height: 30px;
+    }
 }
