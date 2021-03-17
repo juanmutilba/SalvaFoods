@@ -194,6 +194,7 @@ body {
     color: rgba(31, 121, 9, 0.945);
     letter-spacing: 0.1em;
     text-align: center;
+    width: 100%;
 }
 
 .recetas_titulo {
