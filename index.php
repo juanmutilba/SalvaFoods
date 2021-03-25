@@ -18,18 +18,24 @@
     <script src="js/java.js" type="text/javascript"></script>
     <title>Salva Foods</title>
 </head>
+
 <body>
     <div class="conteiner_logo">
         <form action="" class="buscar">
             <input type="text" placeholder="Buscar">
             <button class="btn btn"><img src="./css/images/loop.png" class="loop" alt=""></button>
+
+
         </form>
         <img class="logo_principal" src="./css/images/Logo Principal.jpeg" alt="">
         <div class="cuenta">
             <button class="btn btn-dark">Iniciar Sesion / Registrarse</button>
+
             <img src="./css/images/carrito.png" class="carrito" alt="">
         </div>
+
     </div>
+
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Menu</a>
@@ -47,9 +53,13 @@
         </div>
     </nav>
     <div class="principal">
+
+
         <div class="fotos_carrusel">
+
             <div class="item" class="transicion">
                 <img src="./css/images/Isologo1.jpeg">
+
             </div>
             <div class="item" class="transicion">
                 <img src="./css/images/peanut.jpg">
@@ -59,6 +69,7 @@
             </div>
             <div class="item" class="transicion">
                 <img src="./css/images/cuidado.jpg">
+
             </div>
             <div id="flechas">
                 <p id="flecha-prev" class="flecha" class="center_y">
@@ -75,6 +86,8 @@
                 <div class="punto-nav"></div>
             </div>
         </div>
+
+
         <div class="entrega">
             <div class="entregas">
                 <img src="./css/images/envios_camion.svg" class="envios_camion" alt=""></button>
@@ -102,7 +115,7 @@
                 MISIÓN
             </P>
             <P>
-                Brindar una opción alternativa rica, saludable para los productos lácteos.
+                Brindar una opción alternativa rica y saludable para poder alimentarse y vivir pleno.
             </P>
             <P class="verde">
                 VISIÓN
@@ -114,27 +127,39 @@
 
         </div>
         <div class="recetas_titulo">
-            <p class="verde">Recetas recomendadas!</p>
+            <p class="verde">Nuestras Recetas!</p>
         </div>
         <div class="recetas_foto">
             <div class="receta_foto">
                 <img src="./css/images/torta_mani.jpg" class="recetas_imagen" alt="flan">
                 <p> Torta de Maní </p>
-                <button class="btn-abrir-popup"> ver receta </button>
+                <button class="btn-abrir-popup" > ver receta </button>
             </div>
             <div class="receta_foto" id="receta_foto2">
                 <img src="./css/images/galletitas.jpg" class="recetas_imagen" id="imagen_receta2" alt="flan">
                 <p> Galletitas </p>
-                <button class="btn-abrir-popup"> ver receta </button>
+                <button class="btn-abrir-popup" > ver receta </button>
             </div>
             <div class="receta_foto">
                 <img src="./css/images/barritas.jpg" class="recetas_imagen3" alt="Barritas">
                 <p> Barritas </p>
-                <button class="btn-abrir-popup"> ver receta </button>
+                <button class="btn-abrir-popup" > ver receta </button>
             </div>
         </div>
 
-        
+        <div class="contacto" id="contacto">
+            <p class="verde">CONTACTO</p>
+
+            <form method="get" action="mail.php">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre">
+                <label for="mail">Correo Electronico</label>
+                <input type="text" name="mail" id="mail">
+                <label for="mensaje">Mensaje</label>
+                <textarea rows="6" cols="110" name="mensaje" id="mensaje" placeholder="escribe aqui tus comentarios"> </textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
     </div>
     <div class="overlay" id="overlay">
         <div class="popup" id="popup">
@@ -219,19 +244,6 @@
             </div>
         </div>
     </div>
-        <div class="contacto" id="contacto">
-            <p class="verde">CONTACTO</p>
-
-            <form method="get" action="mail.php">
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre">
-                <label for="mail">Correo Electronico</label>
-                <input type="text" name="mail" id="mail">
-                <label for="mensaje">Mensaje</label>
-                <textarea rows="6" cols="110" name="mensaje" id="mensaje" placeholder="escribe aqui tus comentarios"> </textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
     <footer>
         <div class="div_copyright">Copyright Salvá Foods - 2020 - Todos los derechos reservados</div>
         <div class="div_redes">
@@ -240,7 +252,7 @@
 
             <a href="https://www.instagram.com/salvafoodstandil/?hl=es-la" target="_blank"><img class="boton_redes" src="css/images/instagram.png" alt="instagram"></a>
 
-            <a href=" https://api.whatsapp.com/send?phone=5491124622673&text=&source=&data=&app_absent=" target="_blank "><img class="boton_redes " src="css/images/whatsapp.png" alt="whatsapp "></a>
+            <a href=" https://api.whatsapp.com/send?phone=5491124622673&text=&source=&data=&app_absent=" target=" _blank "><img class="boton_redes " src="css/images/whatsapp.png" alt="whatsapp "></a>
 
         </div>
 
