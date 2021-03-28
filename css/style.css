@@ -553,4 +553,10 @@ footer, footer>div {
         width: 30px;
         height: 30px;
     }
+    .btn_home{
+          margin: 5px;
+    border-radius: 0.625rem;
+    height: 1.875rem;
+    }
+    }
 }
